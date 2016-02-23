@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawerLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:reveal="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    app:statusBarBackground="?attr/colorPrimary"
+    tools:ignore="MissingPrefix">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/layout_toolbar_light"/>
+
+            <include
+                layout="@layout/navigation_container"/>
+        </LinearLayout>
+
+        <com.yydcdut.note.view.RevealView
+            android:id="@+id/reveal_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            reveal:own_touch="true">
+
+            <com.yydcdut.note.view.RevealColorView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </com.yydcdut.note.view.RevealView>
+    </RelativeLayout>
+
+    <android.support.design.internal.ScrimInsetsFrameLayout
+        android:id="@+id/relativeDrawer"
+        android:layout_width="@dimen/drawer_layout_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:insetForeground="#4000">
+
+        <include
+            layout="@layout/navigation_list_drawer"/>
+    </android.support.design.internal.ScrimInsetsFrameLayout>
+</android.support.v4.widget.DrawerLayout>

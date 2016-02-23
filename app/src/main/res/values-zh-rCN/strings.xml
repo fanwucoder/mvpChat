@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">照片笔记</string>
+    <string name="app_setting">设置</string>
+    <string name="app_login">登录</string>
+    <string name="album_ui">相册界面</string>
+    <string name="edit_ui">文字编辑界面</string>
+    <string name="finish_activity">双击退出</string>
+
+    <string name="introduce_start">开始!</string>
+
+    <string name="fab_camera">拍照</string>
+    <string name="fab_local">本地</string>
+    <string name="no_space">没有足够的空间完成此操作</string>
+    <string name="fab_evernote">上传印象笔记</string>
+    <string name="fab_voice">语音输入</string>
+    <string name="fab_speak">请说话</string>
+
+    <!-- menu -->
+    <string name="search">查找</string>
+    <string name="delete">删除</string>
+    <string name="spread">伸展</string>
+    <string name="move">移动</string>
+    <string name="select_all">全选</string>
+    <string name="select_mode">选择</string>
+    <string name="setting">设置</string>
+    <string name="sort">排序</string>
+    <string name="new_file">新建</string>
+    <string name="sort_edit_before">修改时间,远到近</string>
+    <string name="sort_edit_soon">修改时间,近到远</string>
+    <string name="sort_create_before">创建时间,远到近</string>
+    <string name="sort_create_soon">创建时间,近到远</string>
+    <string name="select">选择</string>
+    <string name="info">详情</string>
+    <string name="share">分享</string>
+    <string name="backup">上传云</string>
+    <string name="effect">特效</string>
+    <string name="edit">编辑</string>
+    <string name="show_or_hide">显示或隐藏</string>
+
+
+    <!-- dialog zoom detail-->
+    <string name="file_name">文件名：</string>
+    <string name="size">尺寸：</string>
+    <string name="date">拍摄日期：</string>
+    <string name="detail_note">笔记</string>
+    <string name="detail_gps">Gps</string>
+    <string name="detail_date">时间</string>
+    <string name="detail_exif">Exif</string>
+    <string name="detail_dateTime">拍摄时间  :  </string>
+    <string name="detail_orientation">方向  :  </string>
+    <string name="detail_flash">闪光灯  :  </string>
+    <string name="detail_image_width">宽度  :  </string>
+    <string name="detail_image_length">长度  :  </string>
+    <string name="detail_white_balance">白平衡  :  </string>
+    <string name="detail_longitude">经度  :  </string>
+    <string name="detail_latitude">纬度  :  </string>
+    <string name="detail_make">设备  :  </string>
+    <string name="detail_model">型号  :  </string>
+    <string name="detail_aperture">光圈  :  </string>
+    <string name="detail_exposure_time">曝光时间 :  </string>
+    <string name="detail_focal_length">焦距  :  </string>
+    <string name="detail_iso">ISO速率  :  </string>
+    <string name="detail_unknown">未知</string>
+    <string name="detail_flash_close">关闭</string>
+    <string name="detail_flash_open">开启</string>
+    <string name="detail_wb_auto">自动</string>
+    <string name="detail_wb_manual">手动</string>
+    <array name="detail_time_month">
+        <item>一月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>十二月</item>
+    </array>
+    <string name="detail_content_nothing">没有笔记</string>
+
+    <!-- dialog button text -->
+    <string name="dialog_btn_ok">确定</string>
+    <string name="dialog_btn_cancel">取消</string>
+    <string name="dialog_title_info">详情</string>
+    <string name="dialog_title_new">新建</string>
+    <string name="dialog_title_move">移动到...</string>
+
+    <!-- drawer -->
+    <string name="drawer_open">Open drawer navigation</string>
+    <string name="drawer_close">Navigation drawer Close</string>
+    <string name="start_navigation_listener">You must start the NavigationListener in onInit() method of its main activity. Example: this.setNavigationListener(this);</string>
+
+    <!-- setting -->
+    <string name="choose">选择</string>
+    <string name="color_chooser">选择主题颜色</string>
+    <array name="colors">
+        <item>#2196F3</item>
+        <item>#03a9f4</item>
+        <item>#3F51B5</item>
+        <item>#00BCD4</item>
+        <item>#009688</item>
+        <item>#4CAF50</item>
+        <item>#8BC34A</item>
+        <item>#CDDC39</item>
+        <item>#FFEB3B</item>
+        <item>#FFC107</item>
+        <item>#FF9800</item>
+        <item>#F44336</item>
+        <item>#9C27B0</item>
+        <item>#795548</item>
+        <item>#9E9E9E</item>
+        <item>#607D8B</item>
+    </array>
+    <string-array name="sort">
+        <item>创建时间,远到近</item>
+        <item>创建时间,近到远</item>
+        <item>修改时间,远到近</item>
+        <item>修改时间,近到远</item>
+    </string-array>
+
+    <string name="text_title">标题</string>
+    <string name="text_content">内容</string>
+    <string name="text_cloud">云空间</string>
+
+    <string name="preference_setting">偏好设置</string>
+    <string name="theme">主题颜色</string>
+    <string name="floating_action_button_style">悬浮按钮样式</string>
+    <string name="status_bar">状态栏样式</string>
+    <string name="status_bar_immersive">沉浸状态栏</string>
+    <string name="status_bar_translation">透明状态栏</string>
+    <string name="font">内容字体</string>
+    <string name="edit_category">编辑分类</string>
+    <string name="note_style">内容样式</string>
+    <string name="account_setting">账号设置</string>
+    <string name="camera_setting">相机设置</string>
+    <string name="camera_system">系统相机</string>
+    <string name="camera_5_0">高级相机(Android5.0)</string>
+    <string name="picture_size">照片尺寸</string>
+    <string name="camera_save">退出时保存配置</string>
+    <string name="camera_mirror">前置摄像头镜像</string>
+    <string name="camera_fix">方向矫正</string>
+    <string name="camera_sound">快门声音</string>
+    <string name="sync_setting">同步</string>
+    <string name="sync_auto">自动同步</string>
+    <string name="sync_wifi">仅Wifi下同步</string>
+    <string name="about_setting">关于</string>
+    <string name="about_app">关于App</string>
+    <string name="not_support">这个版本暂时不支持~</string>
+    <string name="camera_front">前置摄像头</string>
+    <string name="camera_back">后置摄像头</string>
+    <string name="camera_current_picture_size">  (当前)</string>
+    <string name="camera_picture_not_support"> (暂不支持)</string>
+    <string name="version">版本号：</string>
+    <string name="splash">关闭启动页</string>
+    <string name="user_failed">拉取信息失败！</string>
+    <string name="feedback">意见反馈</string>
+    <string name="feedback_email">联系方式(邮箱)</string>
+
+    <string name="toast_fail">失败!</string>
+    <string name="rename">重命名</string>
+    <string name="toast_success">成功!</string>
+    <string name="toast_exit">不保存退出？</string>
+    <string name="toast_sure">确定</string>
+    <string name="toast_save">保存</string>
+    <string name="toast_retry">重试</string>
+    <string name="toast_not_support">所选项暂不支持!</string>
+    <string name="toast_sandbox_fail">某些刚拍摄完的照片可能丢失!</string>
+    <string name="toast_no_connection">没有网络连接!</string>
+    <string name="toast_already_login">已经登录</string>
+    <string name="toast_input_error">请输入反馈!</string>
+    <string name="toast_input_email">请输入联系方式~</string>
+    <string name="toast_input_email_error">请输入正确的联系方式!</string>
+    <string name="toast_pgedit_not_support">只支持Jpg格式文件！</string>
+
+    <string name="make_photo_notification">正在后台作图，请不要退出程序！</string>
+    <string name="make_photo_notification_title">正在后台作图!</string>
+    <string name="toast_storage">存储不足！</string>
+    <string name="toast_sdcard">请插入SD卡！</string>
+    <string name="dialog_crash">我们正在鞭打程序员改BUG!</string>
+    <string name="font_local">系统</string>
+    <string name="font_roboto">Roboto</string>
+    <string name="font_choose">选择字体</string>
+    <string name="logout">登出</string>
+    <string name="unbind_qq">解绑腾讯QQ</string>
+    <string name="bind_qq">绑定腾讯QQ</string>
+    <string name="not_login">未登录..</string>
+    <string name="personal_page">个人主页</string>
+    <string name="about_github">Github</string>
+    <string name="about_contact">联系我们</string>
+    <string name="about_update">检查更新</string>
+    <string name="about_share">推荐给好友</string>
+    <string name="about_share_content">我正在使用 照片笔记 App，十分好用。下载：http://a.app.qq.com/o/simple.jsp?pkgname=com.yydcdut.note</string>
+    <string name="general">通用</string>
+    <string name="detail_location">位置信息不可用</string>
+
+    <!-- User Center-->
+    <string name="uc_city">城市</string>
+    <string name="uc_usage_age">使用时间</string>
+    <string name="uc_usage_age_unit">天</string>
+    <string name="uc_phone">手机</string>
+    <string name="uc_android">安卓</string>
+    <string name="uc_storage">存储</string>
+    <string name="uc_cloud">云</string>
+    <string name="uc_unknown">未知</string>
+    <string name="uc_folder">文件夹大小</string>
+    <string name="uc_sandbox">沙盒照片数量</string>
+    <string name="uc_notes">笔记数量</string>
+    <string name="uc_words">总字数</string>
+    <string name="zoom_big">放大</string>
+    <string name="zoom_small">缩小</string>
+    <string name="rotation">旋转</string>
+    <string name="rotation_90">旋转90度</string>
+    <string name="rotation_180">旋转180度</string>
+    <string name="rotation_270">旋转270度</string>
+    <string name="rotation_0">旋转0度</string>
+    <string name="refresh">刷新</string>
+    <string name="uc_no_sdcard">没有SD卡@</string>
+    <string name="copy_url">复制链接</string>
+
+    <!-- Permission -->
+    <string name="permission_title">权限申请</string>
+    <string name="permission_storage_init">App需要 读写SD卡 权限，初始化时需要将用户引导等数据写入到SD卡中~！</string>
+    <string name="permission_storage">App需要 读写SD卡 权限，这样才能将照片存到SD卡中~！</string>
+    <string name="permission_camera_init">App需要 相机 权限，初始化时需要记录相机拍照片尺寸~！</string>
+    <string name="permission_camera">App需要 相机 权限，这样才能拍照~！</string>
+    <string name="permission_location">App需要 定位 权限，拍照时需要将经纬度写入到照片的Exif信息中~！（定位功能由百度地图提供哈）</string>
+    <string name="permission_phone_state">App需要 电话状态 权限，我也不知道为什么，百度地图需要的，你懂的~！</string>
+    <string name="permission_audio">App需要 麦克风 权限，语音输入时需要将音频权限~！</string>
+    <string name="permission_cancel">为什么不给我权限？ヽ( ｀0´)ﾉ</string>
+</resources>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yydcdut.note.view.KeyBoardResizeFrameLayout
+    android:id="@+id/layout_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:reveal="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorPrimary">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:id="@+id/layout_edit_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar_edit"
+                android:layout_marginBottom="@dimen/activity_vertical_margin_small"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="?attr/colorPrimary">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/et_edit_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/text_title"
+                        android:textColor="@color/white"/>
+                </android.support.design.widget.TextInputLayout>
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_edit"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize">
+
+                <LinearLayout
+                    android:id="@+id/layout_toolbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="right|center_vertical"
+                    android:minHeight="?attr/actionBarSize"
+                    android:orientation="horizontal">
+                </LinearLayout>
+            </android.support.v7.widget.Toolbar>
+
+            <EditText
+                android:id="@+id/et_edit_content"
+                style="@null"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/layout_edit_title"
+                android:background="@android:color/white"
+                android:gravity="left|top"
+                android:hint="@string/text_content"
+                android:padding="@dimen/activity_margin_small"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_mid"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <com.yydcdut.note.view.RevealView
+        android:id="@+id/reveal_fab"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        reveal:own_touch="true">
+
+        <com.yydcdut.note.view.RevealColorView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.yydcdut.note.view.RevealView>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <include layout="@layout/layout_floating_edittext"/>
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_fab_location"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/dimen_12dip"
+        android:layout_marginRight="@dimen/dimen_12dip"
+        android:background="@android:color/transparent"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_voice"
+        android:layout_width="fill_parent"
+        android:layout_height="150dip"
+        android:layout_gravity="bottom">
+
+        <com.yydcdut.note.view.RevealView
+            android:id="@+id/reveal_voice"
+            android:layout_width="fill_parent"
+            android:layout_height="150dip"
+            reveal:own_touch="false">
+
+            <com.yydcdut.note.view.RevealColorView
+                android:layout_width="match_parent"
+                android:layout_height="150dip"/>
+        </com.yydcdut.note.view.RevealView>
+
+        <RelativeLayout
+            android:id="@+id/layout_fab_voice_start"
+            android:layout_width="100dip"
+            android:layout_height="100dip"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="-6dip"
+            android:visibility="gone">
+
+            <com.yydcdut.note.view.VoiceRippleView
+                android:id="@+id/img_ripple_fab"
+                android:layout_width="100dip"
+                android:layout_height="100dip"
+                android:background="@drawable/bg_voice_ripple"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab_voice_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_mic_none_white_24dp"
+                app:borderWidth="0dp"
+                app:elevation="6dp"
+                app:fabSize="normal"
+                app:pressedTranslationZ="12dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_voice"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dimen_24dip"
+            android:text="@string/fab_speak"
+            android:textColor="@color/txt_alpha_gray"
+            android:textSize="@dimen/txt_big_large"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <com.yydcdut.note.view.CircleProgressBarLayout
+        android:id="@+id/layout_progress"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone"/>
+
+</com.yydcdut.note.view.KeyBoardResizeFrameLayout>

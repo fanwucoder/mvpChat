@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:reveal="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_background"
+                android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/cl_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="@dimen/dimen_12dip"
+            android:src="@drawable/ic_send_white_24dp"
+            app:elevation="3dip">
+        </android.support.design.widget.FloatingActionButton>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_toolbar_light"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dip"
+            android:layout_marginBottom="@dimen/dimen_12dip">
+
+            <EditText
+                android:id="@+id/et_feedback_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:hint="@string/feedback_email"
+                android:textColor="@color/txt_gray">
+            </EditText>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dip">
+
+            <EditText
+                android:id="@+id/et_feedback_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dip"
+                android:layout_marginRight="3dip"
+                android:hint="@string/feedback"
+                android:textColor="@color/txt_gray">
+            </EditText>
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.yydcdut.note.view.RevealView
+            android:id="@+id/reveal_feedback"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            reveal:own_touch="false">
+
+            <com.yydcdut.note.view.RevealColorView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </com.yydcdut.note.view.RevealView>
+
+        <com.yydcdut.note.view.CircleProgressBarLayout
+            android:id="@+id/layout_progress"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone">
+        </com.yydcdut.note.view.CircleProgressBarLayout>
+
+        <ImageView
+            android:id="@+id/img_feedback_ok"
+            android:layout_width="@dimen/dimen_48dip"
+            android:layout_height="@dimen/dimen_48dip"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_done_white_48dp"
+            android:visibility="invisible"/>
+    </FrameLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PhotoNoter</string>
+    <string name="app_setting">Settings</string>
+    <string name="app_login">Login</string>
+    <string name="album_ui">Album UI</string>
+    <string name="edit_ui">Edit UI</string>
+
+    <string name="introduce_start">Start!</string>
+
+    <string name="fab_camera">Camera</string>
+    <string name="fab_local">Local</string>
+    <string name="no_space">There is not enough space to complete this operation!</string>
+    <string name="fab_evernote">Update Evernote</string>
+    <string name="fab_voice">Voice Input</string>
+    <string name="fab_speak">Speak now</string>
+
+    <string name="finish_activity">Double Click to Quit</string>
+
+    <!-- dialog zoom detail-->
+    <string name="file_name">File Name:</string>
+    <string name="size">Size:</string>
+    <string name="date">Date:</string>
+    <string name="detail_location">Location information is not available</string>
+    <string name="detail_note">Note</string>
+    <string name="detail_gps">Gps</string>
+    <string name="detail_date">Date</string>
+    <string name="detail_exif">Exif</string>
+    <string name="detail_dateTime">DateTime  :  </string>
+    <string name="detail_orientation">Orientation  :  </string>
+    <string name="detail_flash">Flash  :  </string>
+    <string name="detail_image_width">ImageWidth  :  </string>
+    <string name="detail_image_length">ImageLength  :  </string>
+    <string name="detail_white_balance">WhiteBalance  :  </string>
+    <string name="detail_latitude">Altitude  :  </string>
+    <string name="detail_longitude">Longitude  :  </string>
+    <string name="detail_make">Make  :  </string>
+    <string name="detail_model">Model  :  </string>
+    <string name="detail_aperture">Aperture  :  </string>
+    <string name="detail_exposure_time">Exposure Time  :  </string>
+    <string name="detail_focal_length">Focal Length  :  </string>
+    <string name="detail_iso">ISOSpeedRatings  :  </string>
+    <string name="detail_unknown">Unknown</string>
+    <string name="detail_flash_close">Close</string>
+    <string name="detail_flash_open">Open</string>
+    <string name="detail_wb_auto">Auto</string>
+    <string name="detail_wb_manual">Manual</string>
+    <array name="detail_time_month">
+        <item>Jan.</item>
+        <item>Feb.</item>
+        <item>Mar.</item>
+        <item>Apr.</item>
+        <item>May.</item>
+        <item>June.</item>
+        <item>July.</item>
+        <item>Aug.</item>
+        <item>Sept.</item>
+        <item>Oct.</item>
+        <item>Nov.</item>
+        <item>Dec.</item>
+    </array>
+    <string name="detail_content_nothing">Nothing</string>
+
+    <!-- dialog button text -->
+    <string name="dialog_btn_ok">Ok</string>
+    <string name="dialog_btn_cancel">Cancel</string>
+    <string name="dialog_title_info">Information</string>
+    <string name="dialog_title_new">New</string>
+    <string name="dialog_title_move">Move to...</string>
+
+    <!-- menu -->
+    <string name="search">Search</string>
+    <string name="delete">Delete</string>
+    <string name="spread">Spread</string>
+    <string name="move">Move</string>
+    <string name="select_all">Select All</string>
+    <string name="select_mode">Select Mode</string>
+    <string name="setting">Setting</string>
+    <string name="sort">Sort</string>
+    <string name="new_file">New</string>
+    <string name="sort_edit_before">Notes\' edited time, from before</string>
+    <string name="sort_edit_soon">Notes\' edited time, from soon</string>
+    <string name="sort_create_before">Notes\' created time, from before</string>
+    <string name="sort_create_soon">Notes\' created time, from soon</string>
+    <string name="select">Select</string>
+    <string name="info">Info</string>
+    <string name="share">Share</string>
+    <string name="backup">Update</string>
+    <string name="effect">Effect</string>
+    <string name="edit">Edit</string>
+    <string name="zoom_big">Zoom In</string>
+    <string name="zoom_small">Zoom Out</string>
+    <string name="rotation">Rotation</string>
+    <string name="rotation_90">Rotate 90°</string>
+    <string name="rotation_180">Rotate 180°</string>
+    <string name="rotation_270">Rotate 270°</string>
+    <string name="rotation_0">Rotate 0°</string>
+    <string name="refresh">Refresh</string>
+    <string name="copy_url">Copy Url</string>
+    <string name="show_or_hide">Show Or Hide</string>
+
+    <!-- drawer -->
+    <string name="drawer_open">Open drawer navigation</string>
+    <string name="drawer_close">Navigation drawer Close</string>
+    <string name="start_navigation_listener">You must start the NavigationListener in onInit() method of its main activity. Example: this.setNavigationListener(this);</string>
+
+    <!-- setting -->
+    <string name="choose">Choose</string>
+    <string name="color_chooser">Choose Theme</string>
+    <array name="colors">
+        <item>#2196F3</item>
+        <item>#3F51B5</item>
+        <item>#00BCD4</item>
+        <item>#009688</item>
+        <item>#4CAF50</item>
+        <item>#8BC34A</item>
+        <item>#CDDC39</item>
+        <item>#FFEB3B</item>
+        <item>#FFC107</item>
+        <item>#FF9800</item>
+        <item>#F44336</item>
+        <item>#9C27B0</item>
+        <item>#795548</item>
+        <item>#9E9E9E</item>
+        <item>#607D8B</item>
+    </array>
+
+    <string-array name="sort">
+        <item>Notes\' created time, from before</item>
+        <item>Notes\' created time, from soon</item>
+        <item>Notes\' edited time, from before</item>
+        <item>Notes\' edited time, from soon</item>
+    </string-array>
+
+    <string name="text_title">Title</string>
+    <string name="text_content">Content</string>
+    <string name="text_cloud">Cloud</string>
+
+    <string name="preference_setting">Preference</string>
+    <string name="theme">Theme</string>
+    <string name="floating_action_button_style">FloatingActionButton Style</string>
+    <string name="status_bar">Status Bar Style</string>
+    <string name="status_bar_immersive">Immersive Mode</string>
+    <string name="status_bar_translation">Translucent Bars</string>
+    <string name="font">Content Font</string>
+    <string name="edit_category">Edit Category</string>
+    <string name="note_style">Note Style</string>
+    <string name="account_setting">Account</string>
+    <string name="camera_setting">Camera</string>
+    <string name="camera_system">System Camera</string>
+    <string name="camera_5_0">Advanced Camera(Android5.0)</string>
+    <string name="picture_size">Picture Size</string>
+    <string name="camera_save">Save Camera Settings</string>
+    <string name="camera_mirror">Front Camera Mirror</string>
+    <string name="camera_fix">Direction of Correction</string>
+    <string name="camera_sound">Shutter Sound</string>
+    <string name="sync_setting">Synchronization</string>
+    <string name="sync_auto">Auto Sync</string>
+    <string name="sync_wifi">Sync When Wifi</string>
+    <string name="about_setting">About</string>
+    <string name="about_app">About App</string>
+    <string name="not_support">Not Support In This Version</string>
+    <string name="camera_front">Front Camera</string>
+    <string name="camera_back">Back Camera</string>
+    <string name="camera_current_picture_size">  (Current)</string>
+    <string name="camera_picture_not_support"> (Not Support Now)</string>
+    <string name="version">Version:</string>
+    <string name="font_local">System</string>
+    <string name="font_roboto">Roboto</string>
+    <string name="general">General</string>
+    <string name="splash">Close Launch Page</string>
+    <string name="user_failed">Get Infomation Failed!</string>
+    <string name="feedback">Feedback</string>
+    <string name="feedback_email">Email</string>
+
+
+    <string name="toast_fail">Fail!</string>
+    <string name="rename">Rename</string>
+    <string name="toast_success">Success!</string>
+    <string name="toast_exit">Exit Without Saving?</string>
+    <string name="toast_sure">Sure</string>
+    <string name="toast_save">Save</string>
+    <string name="toast_retry">Retry</string>
+    <string name="toast_not_support">Not Support Now!</string>
+    <string name="toast_sandbox_fail">Some Photos may be lost!</string>
+    <string name="toast_no_connection">No Internet connection!</string>
+    <string name="toast_already_login">Have already login</string>
+    <string name="toast_input_error">Please write something!</string>
+    <string name="toast_input_email">Please write your email~</string>
+    <string name="toast_input_email_error">Please write right email!</string>
+    <string name="toast_pgedit_not_support">Only Support Jpg Image!</string>
+
+    <string name="make_photo_notification">Make Photos In the background, please do not exit the Application!</string>
+    <string name="make_photo_notification_title">Making Photos!</string>
+    <string name="toast_storage">There is not enough Storage!</string>
+    <string name="toast_sdcard">Please insert the SD card!</string>
+    <string name="dialog_crash">We are beating the programmers to fix the BUG!</string>
+    <string name="font_choose">Choose Text Font</string>
+    <string name="logout">Log Out</string>
+    <string name="unbind_qq">Unbind QQ</string>
+    <string name="bind_qq">Bind QQ</string>
+    <string name="not_login">Not logged in..</string>
+    <string name="personal_page">Personal Page</string>
+    <string name="about_update">Update</string>
+    <string name="about_contact">Contact Us</string>
+    <string name="about_github">Github</string>
+    <string name="about_share">Share to Friends</string>
+    <string name="about_share_content">I am using App called PhotoNoter, very easy to use. Download:http://a.app.qq.com/o/simple.jsp?pkgname=com.yydcdut.note</string>
+
+    <!-- User Center-->
+    <string name="uc_city">City</string>
+    <string name="uc_usage_age">Usage Age</string>
+    <string name="uc_usage_age_unit">Day</string>
+    <string name="uc_phone">Phone</string>
+    <string name="uc_android">Android</string>
+    <string name="uc_storage">Storage</string>
+    <string name="uc_cloud">Cloud</string>
+    <string name="uc_unknown">Unknown</string>
+    <string name="uc_no_sdcard">No SDCard</string>
+    <string name="uc_folder">Folder Size</string>
+    <string name="uc_sandbox">SandBox Images</string>
+    <string name="uc_notes">Notes</string>
+    <string name="uc_words">Words</string>
+
+    <!-- Permission -->
+    <string name="permission_title">Ask for Permission</string>
+    <string name="permission_storage_init">App needs \"write and read SD card\" permission. When initializing,
+        app will copy \'User Guide Information\' to SD card!</string>
+    <string name="permission_storage">App needs \"write and read SD card\" permission, so that,
+        app can write photos into SD card!</string>
+    <string name="permission_camera_init">App needs \"Camera\" permission, When initializing,
+        app will record the picture sizes of phone\'s camera!</string>
+    <string name="permission_camera">App needs \"Camera\" permission, so that, app can take photos!</string>
+    <string name="permission_location">App needs \"Location\" permission, so that,
+        app will write the longitude and latitude to the photos when capturing!(\'Location\' is powered by Baidu Map)</string>
+    <string name="permission_phone_state">App needs \"Phone State\" permission. I don\'t know why,
+        and Baidu Map needs it, so you must understand now!</string>
+    <string name="permission_audio">App needs \"Microphone\" permission，the function of voice input needs it!</string>
+    <string name="permission_cancel">Why? ヽ( ｀0´)ﾉ</string>
+</resources>

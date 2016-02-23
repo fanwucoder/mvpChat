@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MvpToDo</string>
+    <string name="action_settings">Settings</string>
+    <string name="say_hello">sayHello</string>
+</resources>
