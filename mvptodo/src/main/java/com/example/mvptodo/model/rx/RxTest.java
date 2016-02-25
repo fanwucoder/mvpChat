@@ -12,6 +12,7 @@ import javax.inject.Singleton;
 
 import rx.Observable;
 import rx.Subscriber;
+import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 /**
@@ -29,18 +30,9 @@ public class RxTest {
      * @return
      */
     public Observable<TestBean> createTest(String name, String msg) {
-        return Observable.create(new Observable.OnSubscribe<TestBean>() {
-            @Override
-            public void call(Subscriber<? super TestBean> subscriber) {
-                try {
-                    Thread.sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                subscriber.onNext(new TestBean(name, Thread.currentThread().getId() + ":" + msg + ":线程睡了5s"));
-
-                subscriber.onCompleted();
-            }
-        }).subscribeOn(Schedulers.io());
+        Integer[] a = {1, 1, 1, 1, 1, 2, 3, 3, 3, 4, 4, 5, 2, 5, 4, 5, 1, 5, 6, 78, 5, 3, 5, 7, 8, 4, 6, 74,};
+        return Observable.from(a)
+                .subscribeOn(Schedulers.io())
+                .map(integer -> new TestBean(name + integer, Thread.currentThread().getId() + ":" + msg + integer));
     }
 }

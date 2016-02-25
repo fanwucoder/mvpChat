@@ -16,6 +16,14 @@ public class TestBean {
 
     }
 
+    @Override
+    public String toString() {
+        return "TestBean{" +
+                "name='" + name + '\'' +
+                ", msg='" + msg + '\'' +
+                '}' + "\n";
+    }
+
     public String getName() {
         return name;
     }
