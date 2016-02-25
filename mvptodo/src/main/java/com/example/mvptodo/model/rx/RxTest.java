@@ -10,8 +10,10 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import rx.Notification;
 import rx.Observable;
 import rx.Subscriber;
+import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
@@ -32,7 +34,15 @@ public class RxTest {
     public Observable<TestBean> createTest(String name, String msg) {
         Integer[] a = {1, 1, 1, 1, 1, 2, 3, 3, 3, 4, 4, 5, 2, 5, 4, 5, 1, 5, 6, 78, 5, 3, 5, 7, 8, 4, 6, 74,};
         return Observable.from(a)
-                .subscribeOn(Schedulers.io())
-                .map(integer -> new TestBean(name + integer, Thread.currentThread().getId() + ":" + msg + integer));
+                .subscribeOn(Schedulers.newThread())
+                .map(integer -> new TestBean(name + integer, Thread.currentThread().getId() + ":" + msg + integer))
+                .subscribeOn(Schedulers.newThread())
+                .doOnEach(notification -> {
+                    if (notification.hasValue()) {
+                        TestBean bean = (TestBean) notification.getValue();
+                        bean.setMsg(bean.getMsg() + ":" + Thread.currentThread().getId());
+                    }
+
+                });
     }
 }
