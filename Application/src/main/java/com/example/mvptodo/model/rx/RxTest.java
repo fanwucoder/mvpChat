@@ -5,16 +5,23 @@ import android.content.Context;
 import com.example.mvptodo.bean.TestBean;
 import com.example.mvptodo.injector.ContextLife;
 
-import java.util.List;
+import org.jivesoftware.smack.AbstractXMPPConnection;
+import org.jivesoftware.smack.ConnectionConfiguration;
+import org.jivesoftware.smack.SmackException;
+import org.jivesoftware.smack.XMPPException;
+import org.jivesoftware.smack.chat.Chat;
+import org.jivesoftware.smack.chat.ChatManager;
+import org.jivesoftware.smack.tcp.XMPPTCPConnection;
+import org.jivesoftware.smack.tcp.XMPPTCPConnectionConfiguration;
+
+import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
+import javax.net.ssl.SSLContext;
 
-import rx.Notification;
 import rx.Observable;
-import rx.Subscriber;
-import rx.functions.Action1;
-import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 
 /**
@@ -32,17 +39,35 @@ public class RxTest {
      * @return
      */
     public Observable<TestBean> createTest(String name, String msg) {
-        Integer[] a = {1, 1, 1, 1, 1, 2, 3, 3, 3, 4, 4, 5, 2, 5, 4, 5, 1, 5, 6, 78, 5, 3, 5, 7, 8, 4, 6, 74,};
-        return Observable.from(a)
-                .subscribeOn(Schedulers.newThread())
-                .map(integer -> new TestBean(name + integer, Thread.currentThread().getId() + ":" + msg + integer))
-                .subscribeOn(Schedulers.newThread())
-                .doOnEach(notification -> {
-                    if (notification.hasValue()) {
-                        TestBean bean = (TestBean) notification.getValue();
-                        bean.setMsg(bean.getMsg() + ":" + Thread.currentThread().getId());
-                    }
+        return Observable.create((Observable.OnSubscribe<TestBean>) subscriber -> {
+            AbstractXMPPConnection connection = null;
+            try {
+                XMPPTCPConnectionConfiguration config = XMPPTCPConnectionConfiguration.builder()
+                        .setUsernameAndPassword("fan", "fanwu123fanwu@")
+                        .setSecurityMode(ConnectionConfiguration.SecurityMode.disabled)
+                        .setHost("fanwu.xyz")
+                        .setResource("Android")
+                        .setServiceName("fanwu.xyz").setCustomSSLContext(SSLContext.getInstance("TLS"))
+                        .setPort(5222)
+                        .build();
+                connection = new XMPPTCPConnection(config);
+                connection.connect().login();
+            } catch (XMPPException | SmackException | IOException | NoSuchAlgorithmException e) {
+                e.printStackTrace();
 
-                });
+                if (subscriber.isUnsubscribed()) {
+                    subscriber.unsubscribe();
+                }
+                return;
+            }
+            Chat chat = ChatManager.getInstanceFor(connection).createChat("fanwu@fanwu.xyz");
+            try {
+                chat.sendMessage("Howdy!");
+            } catch (SmackException.NotConnectedException e) {
+                e.printStackTrace();
+            }
+            subscriber.onNext(new TestBean(name, msg));
+        }).subscribeOn(Schedulers.io());
+
     }
 }

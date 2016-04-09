@@ -40,4 +40,7 @@ dependencies {
 
     compile 'io.reactivex:rxandroid:1.0.1'//rxandroid
     compile 'io.reactivex:rxjava:1.0.14'//rxjava
+//smack for android 最小库
+    compile "org.igniterealtime.smack:smack-android:4.1.0"
+    compile "org.igniterealtime.smack:smack-tcp:4.1.0"
 }
