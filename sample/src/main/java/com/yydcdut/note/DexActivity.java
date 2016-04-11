@@ -71,9 +71,7 @@ public class DexActivity extends Activity implements Handler.Callback, Runnable 
             mBitmaps[2] = mPool.submit(new BitmapCallable(null, mFiles[2])).get();
             mBitmaps[3] = mPool.submit(new BitmapCallable(null, mFiles[3])).get();
             mBitmaps[4] = mPool.submit(new BitmapCallable(null, mFiles[4])).get();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
         new Thread(this).start();
