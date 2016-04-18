@@ -24,7 +24,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".mvp.v.home.impl.AlbumActivity" />
-        <activity android:name=".mvp.v.home.impl.IntroduceActivity"></activity>
+        <activity android:name=".mvp.v.home.impl.IntroduceActivity" />
+        <activity android:name=".mvp.v.login.impl.LoginActivity"></activity>
     </application>
 
 </manifest>

@@ -1,11 +1,13 @@
 package com.example.mvptodo.mvp.v.home.impl;
 
+import android.content.Intent;
 import android.widget.TextView;
 
 import com.example.mvptodo.R;
 import com.example.mvptodo.mvp.BaseActivity;
 import com.example.mvptodo.mvp.p.home.impl.HomePresenterImpl;
 import com.example.mvptodo.mvp.v.home.IHomeView;
+import com.example.mvptodo.mvp.v.login.impl.LoginActivity;
 
 import javax.inject.Inject;
 
@@ -33,12 +35,18 @@ public class HomeActivity extends BaseActivity implements IHomeView {
     public void initUiAndListener() {
         mHomePresenter.attachView(this);
         findViewById(R.id.sayHello).setOnClickListener(view -> mHomePresenter.sayHello());
+        jump2Login();
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         mHomePresenter.detachView();
+    }
+
+    public void jump2Login() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     @Override

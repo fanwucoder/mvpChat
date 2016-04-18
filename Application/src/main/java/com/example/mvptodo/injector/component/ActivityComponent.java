@@ -9,6 +9,7 @@ import com.example.mvptodo.injector.module.ActivityModule;
 import com.example.mvptodo.model.rx.RxTest;
 import com.example.mvptodo.mvp.v.home.impl.HomeActivity;
 import com.example.mvptodo.mvp.v.home.impl.SplashActivity;
+import com.example.mvptodo.mvp.v.login.impl.LoginActivity;
 
 import dagger.Component;
 
@@ -32,6 +33,8 @@ public interface ActivityComponent {
     void inject(SplashActivity splashActivity);
 
     RxTest getRxTest();
+
+    void inject(LoginActivity loginActivity);
     /*RxCategory getRxCategory();
 
     RxPhotoNote getRxPhotoNote();

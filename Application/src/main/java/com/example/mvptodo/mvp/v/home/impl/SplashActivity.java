@@ -42,6 +42,7 @@ public class SplashActivity extends BaseActivity implements ISplashView {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        jumpToMain();//此处先跳到主页
     }
 
     @Override
@@ -59,5 +60,9 @@ public class SplashActivity extends BaseActivity implements ISplashView {
     @Override
     public void jumpToIntroduce() {
 
+    }
+    public void jumpToMain(){
+        Intent intent=new Intent(this,HomeActivity.class);
+        startActivity(intent);
     }
 }

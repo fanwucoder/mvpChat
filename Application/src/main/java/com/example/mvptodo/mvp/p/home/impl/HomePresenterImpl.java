@@ -2,6 +2,7 @@ package com.example.mvptodo.mvp.p.home.impl;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 
 import com.example.mvptodo.injector.ContextLife;
@@ -9,6 +10,7 @@ import com.example.mvptodo.model.rx.RxTest;
 import com.example.mvptodo.mvp.IView;
 import com.example.mvptodo.mvp.p.home.IHomePresenter;
 import com.example.mvptodo.mvp.v.home.IHomeView;
+import com.example.mvptodo.mvp.v.login.impl.LoginActivity;
 
 import javax.inject.Inject;
 
@@ -40,6 +42,8 @@ public class HomePresenterImpl implements IHomePresenter {
     public void detachView() {
 
     }
+
+
 
     @Override
     public void sayHello() {
