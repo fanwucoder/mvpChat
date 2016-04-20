@@ -45,4 +45,5 @@ dependencies {
 //smack for android 最小库
     compile "org.igniterealtime.smack:smack-android:4.1.0"
     compile "org.igniterealtime.smack:smack-tcp:4.1.0"
+    compile 'com.jakewharton:butterknife:7.0.1'
 }

@@ -7,6 +7,8 @@ import android.content.Context;
 import com.example.mvptodo.injector.ContextLife;
 import com.example.mvptodo.injector.PerFragment;
 import com.example.mvptodo.injector.module.FragmentModule;
+import com.example.mvptodo.model.rx.RxChart;
+import com.example.mvptodo.model.rx.RxTest;
 
 import dagger.Component;
 
@@ -23,6 +25,10 @@ public interface FragmentComponent {
     Context getActivityContext();
 
     Activity getActivity();
+
+    RxTest getRxTest();
+
+    RxChart getRxChart();
 /*
     RxCategory getRxCategory();
 

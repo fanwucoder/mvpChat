@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.example.mvptodo.ToDoApplication;
 import com.example.mvptodo.injector.ContextLife;
+import com.example.mvptodo.model.rx.RxChart;
 import com.example.mvptodo.model.rx.RxTest;
 
 import javax.inject.Singleton;
@@ -17,6 +18,7 @@ import dagger.Provides;
 @Module
 public class ApplicationModule {
     private final RxTest mRxTest;
+    private final RxChart mRxChart;
     private ToDoApplication mApplication;
   /*  private RxCategory mRxCategory;
     private RxPhotoNote mRxPhotoNote;
@@ -27,6 +29,7 @@ public class ApplicationModule {
     public ApplicationModule(ToDoApplication application) {
         mApplication = application;
         mRxTest = new RxTest(mApplication.getApplicationContext());
+        mRxChart = new RxChart(mApplication.getApplicationContext());
      /*   mLocalStorageUtils = new LocalStorageUtils(mApplication.getApplicationContext());
         mRxSandBox = new RxSandBox(mApplication.getApplicationContext());
         mRxPhotoNote = new RxPhotoNote(mApplication.getApplicationContext());
@@ -45,6 +48,12 @@ public class ApplicationModule {
     @Singleton
     public RxTest provideRxTest() {
         return mRxTest;
+    }
+
+    @Provides
+    @Singleton
+    public RxChart provideRxChart() {
+        return mRxChart;
     }
 /*
     @Provides

@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.example.mvptodo.injector.ContextLife;
 import com.example.mvptodo.injector.module.ApplicationModule;
+import com.example.mvptodo.model.rx.RxChart;
 import com.example.mvptodo.model.rx.RxTest;
 
 import javax.inject.Singleton;
@@ -21,6 +22,7 @@ public interface ApplicationComponent {
     Context getContext();
 
     RxTest getRxTest();
+    RxChart getRxChart();
  /*   LocalStorageUtils getLocalStorageUtils();
 
     RxCategory getRxCategory();

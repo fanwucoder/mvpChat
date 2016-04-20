@@ -6,6 +6,8 @@ import android.content.Context;
 import com.example.mvptodo.injector.ContextLife;
 import com.example.mvptodo.injector.PerService;
 import com.example.mvptodo.injector.module.ServiceModule;
+import com.example.mvptodo.model.rx.RxChart;
+import com.example.mvptodo.model.rx.RxTest;
 
 import dagger.Component;
 
@@ -21,6 +23,10 @@ public interface ServiceComponent {
 
     @ContextLife("Application")
     Context getApplicationContext();
+
+    RxTest getRxTest();
+
+    RxChart getRxChart();
 /*
     RxCategory getRxCategory();
 

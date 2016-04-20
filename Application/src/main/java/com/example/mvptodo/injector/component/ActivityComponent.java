@@ -6,6 +6,7 @@ import android.content.Context;
 import com.example.mvptodo.injector.ContextLife;
 import com.example.mvptodo.injector.PerActivity;
 import com.example.mvptodo.injector.module.ActivityModule;
+import com.example.mvptodo.model.rx.RxChart;
 import com.example.mvptodo.model.rx.RxTest;
 import com.example.mvptodo.mvp.v.home.impl.HomeActivity;
 import com.example.mvptodo.mvp.v.home.impl.SplashActivity;
@@ -32,9 +33,12 @@ public interface ActivityComponent {
 
     void inject(SplashActivity splashActivity);
 
-    RxTest getRxTest();
 
     void inject(LoginActivity loginActivity);
+
+    RxTest getRxTest();
+
+    RxChart getRxChart();
     /*RxCategory getRxCategory();
 
     RxPhotoNote getRxPhotoNote();

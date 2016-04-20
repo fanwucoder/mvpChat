@@ -15,7 +15,7 @@ public class SplashActivity extends BaseActivity implements ISplashView {
 
     //此处应该注入接口
     @Inject
-     SplashPresenterImpl splashPresenter;
+    SplashPresenterImpl splashPresenter;
 
     @Override
     public boolean setStatusBar() {
@@ -49,6 +49,7 @@ public class SplashActivity extends BaseActivity implements ISplashView {
     public void jumpToAlbum() {
         Intent intent = new Intent(this, AlbumActivity.class);
         startActivity(intent);
+        finish();
     }
 
     @Override
@@ -59,10 +60,12 @@ public class SplashActivity extends BaseActivity implements ISplashView {
 
     @Override
     public void jumpToIntroduce() {
-
+        finish();
     }
-    public void jumpToMain(){
-        Intent intent=new Intent(this,HomeActivity.class);
+
+    public void jumpToMain() {
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
+        finish();
     }
 }
