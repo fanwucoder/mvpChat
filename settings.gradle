@@ -1,1 +1,1 @@
-include ':sample', ':PG_Edit_SDK', ':Application'
+include ':Application',':sample', ':PG_Edit_SDK'

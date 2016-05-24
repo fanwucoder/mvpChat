@@ -8,9 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.FrameLayout;
-
 
 import com.example.mvptodo.R;
 import com.example.mvptodo.ToDoApplication;
@@ -120,6 +118,7 @@ public abstract class BaseActivity extends AppCompatActivity implements IThemeVi
                 .applicationComponent(((ToDoApplication) getApplication()).getApplicationComponent())
                 .build();
         ActivityCollector.addActivity(this);
+        setTheme(R.style.AppTheme);
        /* mThemePresenter = new ThemePresenter(getApplicationContext());
         mThemePresenter.attachView(this);
         mThemePresenter.setTheme();
