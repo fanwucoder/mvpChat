@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
-    tools:context="com.example.mvptodo.mvp.v.login.impl.LoginActivity">
+    tools:context="com.fanwu.chat.mvp.v.login.impl.LoginActivity">
 
     <com.rengwuxian.materialedittext.MaterialEditText
         android:id="@+id/login_et_user_name"

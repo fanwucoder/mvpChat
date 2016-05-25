@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:http="http://schemas.android.com/apk/res-auto"
-    package="com.example.mvptodo">
+    package="com.fanwu.chat">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".ToDoApplication"
+        android:name="com.fanwu.chat.ToDoApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".mvp.v.home.impl.HomeActivity" />
+        <activity android:name="com.fanwu.chat.mvp.v.home.impl.HomeActivity" />
         <activity
-            android:name=".mvp.v.home.impl.SplashActivity"
+            android:name="com.fanwu.chat.mvp.v.login.impl.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -23,9 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mvp.v.home.impl.AlbumActivity" />
-        <activity android:name=".mvp.v.home.impl.IntroduceActivity" />
-        <activity android:name=".mvp.v.login.impl.LoginActivity"></activity>
+        <activity android:name="com.fanwu.chat.mvp.v.login.impl.AlbumActivity" />
+        <activity android:name="com.fanwu.chat.mvp.v.login.impl.IntroduceActivity" />
+        <activity android:name="com.fanwu.chat.mvp.v.login.impl.LoginActivity"></activity>
     </application>
 
 </manifest>

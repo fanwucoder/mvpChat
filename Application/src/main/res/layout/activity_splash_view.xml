@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mvp.v.home.impl.SplashActivity">
+    tools:context="com.fanwu.chat.mvp.v.login.impl.SplashActivity">
 
     <ImageView
         android:layout_width="match_parent"

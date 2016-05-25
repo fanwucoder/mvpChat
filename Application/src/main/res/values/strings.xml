@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MvpToDo</string>
+    <string name="app_name">MvpChart</string>
     <string name="action_settings">Settings</string>
     <string name="say_hello">sayHello</string>
     <string name="Complete">登录成功</string>
@@ -10,4 +10,7 @@
     <string name="test_passwd">fanwu123fanwu@</string>
     <string name="test_user">fanwu</string>
     <string name="test_server">fanwu.xyz</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

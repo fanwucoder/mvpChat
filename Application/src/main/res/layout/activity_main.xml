@@ -4,18 +4,40 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <TextView
-        android:id="@+id/greet_view"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="我擦" />
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/sayHello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <ImageButton
+            style="@style/main_bottom_style"
+            android:src="@drawable/selector_weixin"
+            android:text="微信" />
+
+        <ImageButton
+            style="@style/main_bottom_style"
+            android:src="@drawable/selector_contact"
+            android:text="联系人" />
+
+        <ImageButton
+            style="@style/main_bottom_style"
+            android:src="@drawable/selector_find"
+
+            android:text="发现" />
+
+        <ImageButton
+            style="@style/main_bottom_style"
+            android:src="@drawable/selector_profile"
+            android:text="我" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/greet_view"
-        android:text="@string/say_hello" />
+        android:layout_alignParentTop="true">
+
+    </android.support.v4.view.ViewPager>
 </RelativeLayout>
